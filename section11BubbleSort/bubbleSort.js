@@ -18,4 +18,8 @@ let swap = (arr, idx1, idx2) => {
 
 let test1 = [22, 34, 1, 3, 89, 3, 65, 10];
 console.log(bubbleSort(test1));
-// console.log(swap(test1, 0,1));
+
+//time complexity:
+//in general: O(n^2)
+// if the arr is nearly sorted,
+// O(n)
