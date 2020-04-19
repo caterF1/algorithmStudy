@@ -15,12 +15,14 @@ let pivotHelper = (arr, start = 0, end = arr.length + 1) => {
 // console.log(pivotHelper(test1));
 
 let quickSort = (arr, left = 0, right = arr.length - 1) => {
-    let pivotIndex = pivotHelper(arr, left, right);
     if (left< right){
-        return arr; 
+        let pivotIndex = pivotHelper(arr, left, right);
+        quickSort(arr, left, pivotIndex);
+        quickSort(arr, pivotIndex+1, right);
     }
-    quickSort(arr, left, pivotIndex);
-    quickSort(arr, pivotIndex+1, right);
+   
+    return arr; 
+
 }
 
 let test2 = [4, 6, 9, 1, 2, 5, 3]
